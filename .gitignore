@@ -1,0 +1,5 @@
+# Project exclude paths
+/CommonDemo/target/
+/JavaEEDemo/target/
+/JavaSEDemo/target/
+/SpringMvcDemo/target/
