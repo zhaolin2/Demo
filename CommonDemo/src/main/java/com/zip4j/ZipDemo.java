@@ -1,4 +1,4 @@
-package com.zip;
+package com.zip4j;
 
 import lombok.SneakyThrows;
 import net.lingala.zip4j.io.ZipOutputStream;
