@@ -8,6 +8,6 @@ package com.guava;
 public class TableDemo {
 
     public static void main(String[] args) {
-        
+
     }
 }
