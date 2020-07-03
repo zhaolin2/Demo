@@ -1,4 +1,4 @@
-package com.javaee.redis;
+package com.middle.redis;
 
 
 import org.redisson.Redisson;
@@ -6,12 +6,8 @@ import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 
-import java.awt.*;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.concurrent.*;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * @Description: 基于redis的分布式锁

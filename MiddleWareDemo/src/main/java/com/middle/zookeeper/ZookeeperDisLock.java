@@ -1,13 +1,11 @@
-package com.javaee.lock;
+package com.middle.zookeeper;
 
-import com.sun.deploy.util.StringUtils;
 import io.netty.util.internal.StringUtil;
 import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

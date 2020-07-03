@@ -14,6 +14,8 @@
         <module>JavaEEDemo</module>
         <module>CommonDemo</module>
         <module>SpringMvcDemo</module>
+        <module>untitled</module>
+        <module>MiddleWareDemo</module>
     </modules>
     <packaging>pom</packaging>
     <description>主要用来存放平时所写的demo</description>

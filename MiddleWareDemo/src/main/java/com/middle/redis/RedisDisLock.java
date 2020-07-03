@@ -1,15 +1,18 @@
-package com.javaee.lock;
+package com.middle.redis;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.SetParams;
 
 import java.util.Collections;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
 
 /**
  * @author zl
  */
-public class RedisDisLock implements DistributedLock {
+public class RedisDisLock implements Lock {
 
     private static final String LOCK_SUCCESS = "OK";
     private static final Long RELEASE_SUCCESS = 1L;
@@ -67,8 +70,36 @@ public class RedisDisLock implements DistributedLock {
         this.expireTime = expireTime;
     }
 
+    public static void main(String[] args) {
+//        Runnable runnable = () -> {
+//            RedisDisLock lock = null;
+//            String unLockIdentify = null;
+//            try {
+//                Jedis conn = new Jedis("127.0.0.1",6379);
+//                lock = new RedisDisLock(conn, "test1");
+//                unLockIdentify = lock.acquire();
+//                System.out.println(Thread.currentThread().getName() + "正在运行");
+//                secskill();
+//            } finally {
+//                if (lock != null) {
+//                    lock.release(unLockIdentify);
+//                }
+//            }
+//        };
+//
+//        for (int i = 0; i < 10; i++) {
+//            Thread t = new Thread(runnable);
+//            t.start();
+//        }
+    }
+
+    static int n = 500;
+    public static void secskill() {
+        System.out.println(--n);
+    }
+
     @Override
-    public String acquire() {
+    public void lock() {
         try {
             // 获取锁的超时时间，超过这个时间则放弃获取锁
             long end = System.currentTimeMillis() + acquireTimeout;
@@ -80,7 +111,7 @@ public class RedisDisLock implements DistributedLock {
                 String result = jedis.set(lockKey, requireToken, setParams);
 //                String result = jedis.set(lockKey, requireToken, SET_IF_NOT_EXIST, SET_WITH_EXPIRE_TIME, expireTime);
                 if (LOCK_SUCCESS.equals(result)) {
-                    return requireToken;
+                    return;
                 }
                 try {
                     Thread.sleep(100);
@@ -91,61 +122,52 @@ public class RedisDisLock implements DistributedLock {
         } catch (Exception e) {
 //            log.error("acquire lock due to error", e);
         }
-
-        return null;
     }
 
     @Override
-    public boolean release(String identify) {
-        if(identify == null){
-            return false;
-        }
+    public void lockInterruptibly() throws InterruptedException {
 
-        String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
-        Object result = new Object();
-        try {
-            result = jedis.eval(script, Collections.singletonList(lockKey),
-                    Collections.singletonList(identify));
-            if (RELEASE_SUCCESS.equals(result)) {
-//                log.info("release lock success, requestToken:{}", identify);
-                return true;
-            }}catch (Exception e){
-//            log.error("release lock due to error",e);
-        }finally {
-            if(jedis != null){
-                jedis.close();
-            }
-        }
+    }
 
-//        log.info("release lock failed, requestToken:{}, result:{}", identify, result);
+    @Override
+    public boolean tryLock() {
         return false;
     }
 
-    public static void main(String[] args) {
-        Runnable runnable = () -> {
-            RedisDisLock lock = null;
-            String unLockIdentify = null;
-            try {
-                Jedis conn = new Jedis("127.0.0.1",6379);
-                lock = new RedisDisLock(conn, "test1");
-                unLockIdentify = lock.acquire();
-                System.out.println(Thread.currentThread().getName() + "正在运行");
-                secskill();
-            } finally {
-                if (lock != null) {
-                    lock.release(unLockIdentify);
-                }
-            }
-        };
-
-        for (int i = 0; i < 10; i++) {
-            Thread t = new Thread(runnable);
-            t.start();
-        }
+    @Override
+    public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
+        return false;
     }
 
-    static int n = 500;
-    public static void secskill() {
-        System.out.println(--n);
+    @Override
+    public void unlock() {
+//        if(identify == null){
+//            return false;
+//        }
+//
+//        String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
+//        Object result = new Object();
+//        try {
+//            result = jedis.eval(script, Collections.singletonList(lockKey),
+//                    Collections.singletonList(identify));
+//            if (RELEASE_SUCCESS.equals(result)) {
+////                log.info("release lock success, requestToken:{}", identify);
+//                return true;
+//            }}catch (Exception e){
+////            log.error("release lock due to error",e);
+//        }finally {
+//            if(jedis != null){
+//                jedis.close();
+//            }
+//        }
+
+//        log.info("release lock failed, requestToken:{}, result:{}", identify, result);
+        return
+                ;
+    }
+
+    @Override
+    public Condition newCondition() {
+        return null;
     }
 }

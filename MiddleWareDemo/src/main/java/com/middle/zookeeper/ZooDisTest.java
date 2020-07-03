@@ -1,6 +1,5 @@
-package com.javaee.zookeeper;
+package com.middle.zookeeper;
 
-import com.javaee.lock.ZookeeperDisLock;
 import lombok.extern.java.Log;
 
 import java.util.concurrent.CountDownLatch;

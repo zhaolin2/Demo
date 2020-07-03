@@ -1,4 +1,4 @@
-package com.javaee.redis;
+package com.middle.redis;
 
 import org.apache.commons.lang3.StringUtils;
 import redis.clients.jedis.Jedis;

@@ -1,4 +1,4 @@
-package com.javaee.redis;
+package com.middle.redis;
 
 public class BloomFilter {
     private byte[] data;
