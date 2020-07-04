@@ -2,6 +2,7 @@ package com.javase.threadPool;
 
 import lombok.ToString;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -17,9 +18,9 @@ public class MyRunnable implements Runnable {
     }
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName()+" StartTime= "+ new Date());
+        System.out.println(Thread.currentThread().getName()+" StartTime= "+ LocalDate.now().toString());
         processCommand();
-        System.out.println(Thread.currentThread().getName()+" EndTime= "+ new Date());
+        System.out.println(Thread.currentThread().getName()+" EndTime= "+ LocalDate.now().toString());
 
     }
 

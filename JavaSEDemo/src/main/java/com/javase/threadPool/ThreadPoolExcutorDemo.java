@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author zl
+ * https://mrbird.cc/Java-Thread-Pool.html
  */
 public class ThreadPoolExcutorDemo {
     private static final int CORE_POOL_SIZE=5;
@@ -22,6 +23,7 @@ public class ThreadPoolExcutorDemo {
                 KEEP_ALIVE_TIME,
                 TimeUnit.MILLISECONDS,
                 new ArrayBlockingQueue<>(QUEUE_SIZE),
+                new InnerThreadFactory("ThreadPoolDemo"),
                 //会使用调用线程来执行这个runnable
                 new ThreadPoolExecutor.CallerRunsPolicy()
         );
@@ -32,33 +34,58 @@ public class ThreadPoolExcutorDemo {
 
         }
 
-        poolExecutor.shutdown();
-        while (!poolExecutor.isTerminated()){
 
+
+//        poolExecutor.shutdown();
+        while (!poolExecutor.isTerminated()){
+            if (poolExecutor.getActiveCount()==0){
+                poolExecutor.shutdown();
+            }
+            System.out.println(poolExecutor.getActiveCount());
         }
         System.out.println("Thread Shut down");
     }
 
     public static class InnerThreadFactory implements ThreadFactory{
 
-        private AtomicInteger atomicInteger = new AtomicInteger();
+        private static final AtomicInteger poolNumber = new AtomicInteger(1);
+        private final ThreadGroup group;
+        private final AtomicInteger threadNumber = new AtomicInteger(1);
+        private final String namePrefix;
 
         private boolean isDaemon;
 
         public InnerThreadFactory(){
-            this.isDaemon=false;
+            SecurityManager s = System.getSecurityManager();
+            group = (s != null) ? s.getThreadGroup() :
+                    Thread.currentThread().getThreadGroup();
+            this.namePrefix = "pool-Demo" +
+                    poolNumber.getAndIncrement() +
+                    "-thread-";
         }
-        public InnerThreadFactory(boolean isDaemon){
-            this.isDaemon = isDaemon;
+        public InnerThreadFactory(String namePrefix){
+
+            SecurityManager s = System.getSecurityManager();
+             group = (s != null) ? s.getThreadGroup() :
+                    Thread.currentThread().getThreadGroup();
+             this.namePrefix = namePrefix +"-"+
+                    poolNumber.getAndIncrement() +
+                    "-thread-";
+
         }
 
         @Override
         public Thread newThread(Runnable r) {
-            atomicInteger.incrementAndGet();
-            Thread thread = new Thread(String.valueOf(atomicInteger.get()));
-            thread.setName("PoolDemo");
-            thread.setDaemon(isDaemon);
-            return thread;
+            Thread t = new Thread(group, r,
+                    namePrefix + threadNumber.getAndIncrement(),
+                    0);
+            if (t.isDaemon()) {
+                t.setDaemon(false);
+            }
+            if (t.getPriority() != Thread.NORM_PRIORITY) {
+                t.setPriority(Thread.NORM_PRIORITY);
+            }
+            return t;
         }
     }
 }
