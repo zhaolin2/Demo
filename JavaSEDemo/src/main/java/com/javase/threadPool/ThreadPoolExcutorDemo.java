@@ -1,6 +1,4 @@
-package com.javase.thread.threadPool;
-
-import org.omg.CORBA.TIMEOUT;
+package com.javase.threadPool;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadFactory;

@@ -1,6 +1,5 @@
-package com.javase.thread.threadPool;
+package com.javase.threadPool;
 
-import com.javase.thread.callable.Data;
 import lombok.ToString;
 
 import java.util.Date;

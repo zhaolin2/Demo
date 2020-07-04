@@ -6,10 +6,10 @@ import java.lang.reflect.Method;
 /**
  * 自定义从文件系统中加载类到jvm中
  */
-public class ClassIdentity {
+public class FileSystemClassLoaderDemo {
 
 	public static void main(String[] args) {
-		new ClassIdentity().testClassIdentity();
+		new FileSystemClassLoaderDemo().testClassIdentity();
 	}
 	
 	public void testClassIdentity() {
