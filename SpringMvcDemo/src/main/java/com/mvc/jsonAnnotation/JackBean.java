@@ -35,4 +35,12 @@ public class JackBean {
     public void setPass(String pass) {
         this.pass = pass;
     }
+
+    @Override
+    public String toString() {
+        return "JackBean{" +
+                "name='" + name + '\'' +
+                ", pass='" + pass + '\'' +
+                '}';
+    }
 }

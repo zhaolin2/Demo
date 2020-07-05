@@ -28,7 +28,7 @@ import java.util.Map;
 @RestController
 public class DataBindController {
 
-    @GetMapping("/databinder")
+    @GetMapping(value = "/databinder",produces = {"application/xml"})
     public String dataBind(@RequestParam String test){
 
         System.out.println(test);
