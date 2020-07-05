@@ -1,4 +1,4 @@
-package com.serialize;
+package com.javaee.rpc.serialize;
 
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;

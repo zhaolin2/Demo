@@ -1,4 +1,4 @@
-package com.serialize;
+package com.javaee.rpc.serialize;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.JSONSerializer;
