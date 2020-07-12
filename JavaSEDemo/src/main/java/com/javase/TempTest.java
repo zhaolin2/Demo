@@ -5,30 +5,21 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
- * @author zl
+ * 简单测试类
  */
 public class TempTest {
+
+    static String pass;
+
     public static void main(String[] args) {
-        String hostUrl="";
-        HashMap<String, String> params=new HashMap<>();
+        TempTest tempTest = new TempTest();
+        String pass = TempTest.pass;
+        Class<? extends TempTest> aClass = tempTest.getClass();
 
-        StringBuilder stringBuilder = new StringBuilder(hostUrl).append("?");
+    }
 
-        List<Integer> alist = new ArrayList<>();
-
-        alist.add(1);
-
-        alist.add(2);
-
-        alist.add(3);
-
-        List<Integer> blist = alist;
-
-        blist.set(1, 1);
-
-        System.out.println(alist.get(0));
-        System.out.println(blist.get(1));
-
+    public void test(){
+        pass="123";
     }
 
 }
