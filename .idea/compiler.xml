@@ -10,10 +10,11 @@
         <module name="JavaEEDemo" />
         <module name="JavaSEDemo" />
         <module name="CommonDemo" />
-        <module name="SpringMvcDemo" />
         <module name="MiddleWareDemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="SpringMvcDemo" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
