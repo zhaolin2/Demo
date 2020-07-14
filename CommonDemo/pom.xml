@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>CommonDemo</artifactId>
+    <description>主要是工具包对应的部分demo</description>
 
     <dependencies>
         <!-- guava工具包 -->

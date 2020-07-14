@@ -14,6 +14,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
+      <module name="CommonDemo" target="1.8" />
+      <module name="Demo" target="1.8" />
+      <module name="JavaEEDemo" target="1.8" />
+      <module name="JavaSEDemo" target="1.8" />
+      <module name="MiddleWareDemo" target="1.8" />
       <module name="SpringMvcDemo" target="8" />
     </bytecodeTargetLevel>
   </component>

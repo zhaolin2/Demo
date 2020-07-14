@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>JavaEEDemo</artifactId>
+    <description>主要是se之后 web开发所使用到的知识</description>
 
     <dependencies>
         <!-- redis Client -->
@@ -45,25 +46,6 @@
             <artifactId>zkclient</artifactId>
             <version>0.4</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>28.0-jre</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.10</version>
-        </dependency>
-
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-
 
         <!--        序列化jar包-->
         <dependency>

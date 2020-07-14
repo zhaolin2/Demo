@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>JavaSEDemo</artifactId>
-    <description>主要用来存放一些se相关的demo</description>
+    <description>主要用来存放一些java基础知识相关的demo</description>
 
     <dependencies>
         <!-- 动态代理 -->
