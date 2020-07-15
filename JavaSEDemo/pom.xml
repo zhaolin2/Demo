@@ -13,6 +13,7 @@
     <description>主要用来存放一些java基础知识相关的demo</description>
 
     <dependencies>
+
         <!-- 动态代理 -->
         <dependency>
             <groupId>cglib</groupId>
@@ -25,6 +26,12 @@
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>
             <version>0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
