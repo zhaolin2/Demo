@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * @Description:常用集合类Arraylist的demo
@@ -29,6 +30,9 @@ public class ArrayListDemo {
         arrayDeque.push("123");
 
         System.out.println(arrayDeque.size());
+
+        ArrayList<String> arrayList = new ArrayList<>();
+        CopyOnWriteArrayList<Object> copyOnWriteArrayList = new CopyOnWriteArrayList<>(arrayList);
 
     }
 }

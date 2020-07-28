@@ -19,19 +19,21 @@ import java.util.*;
  */
 public class TempTest {
 
-
     public static void main(String[] args) {
 
-        TempTest tempTest = new TempTest();
+        ArrayList<Object> objects = new ArrayList<>();
+        objects.add("123");
+        objects.add("456");
+        objects.add("789");
+        List<Object> objects1 = objects.subList(0, 1);
+        System.out.println(objects1.getClass());
 
-
-        int firstBegin= tempTest.getRandom(1,32*3-3);
-        int secondBegin= tempTest.getRandom(32*3+1,32*3+1+32*100-100);
-        int thirdBegin= tempTest.getRandom(32*3+1+32*100+1,4950);
-
-        System.out.println(firstBegin+"--"+secondBegin+"--"+thirdBegin);
-
-        System.out.println(32*3+1+32*100+1);
+//        System.out.println(99 << 1);
+//        System.out.println(99 >> 1);
+//        System.out.println(99 >>> 1);
+//
+//        System.out.println(-99 >> 1);
+//        System.out.println(-99 >>> 1);
 
     }
 
@@ -155,4 +157,11 @@ public class TempTest {
     }
 
 
+}
+
+class SonClass extends TempTest{
+    public void test(){
+        System.out.println();
+        super.luckDraw();
+    }
 }
