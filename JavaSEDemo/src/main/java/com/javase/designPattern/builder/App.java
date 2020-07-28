@@ -29,6 +29,9 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 建造者模式主要是为了解决复杂对象的快速构建
+ * 讲对象的表示和构建 分离
+ * 由于原来的对象比较复杂 所以仅仅用来表示
+ * 那么创建工作就交给builder来创建
  */
 public class App {
 
