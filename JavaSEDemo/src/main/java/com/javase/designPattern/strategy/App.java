@@ -29,15 +29,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 策略模式是一种软件设计模式  允许在运行时选择算法的行为
- * <p>The Strategy pattern (also known as the policy pattern) is a software design pattern that
- * enables an algorithm's behavior to be selected at runtime.</p>
- *
- * <p>Before Java 8 the Strategies needed to be separate classes forcing the developer
- * to write lots of boilerplate code. With modern Java it is easy to pass behavior
- * with method references and lambdas making the code shorter and more readable.</p>
- *
- * <p>In this example ({@link DragonSlayingStrategy}) encapsulates an algorithm. The containing
- * object ({@link DragonSlayer}) can alter its behavior by changing its strategy.</p>
  * 
  */
 //@Slf4j
