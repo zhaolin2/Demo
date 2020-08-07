@@ -16,9 +16,7 @@ public class SpiMain {
             ser.test();
         }
         System.out.println("--------------------------------");
-        Iterator<SpiService> iterator = load.iterator();
-        while(iterator.hasNext()) {
-            SpiService ser = iterator.next();
+        for (SpiService ser : load) {
             ser.test();
         }
     }
