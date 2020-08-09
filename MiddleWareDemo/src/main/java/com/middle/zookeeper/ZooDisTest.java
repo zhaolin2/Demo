@@ -1,6 +1,5 @@
 package com.middle.zookeeper;
 
-import lombok.extern.java.Log;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.ReentrantLock;
@@ -8,7 +7,6 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author zl
  */
-@Log
 public class ZooDisTest {
 
     private static final ReentrantLock LOCK=new ReentrantLock();

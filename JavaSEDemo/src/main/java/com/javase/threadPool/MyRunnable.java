@@ -1,6 +1,5 @@
 package com.javase.threadPool;
 
-import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -8,7 +7,6 @@ import java.util.Date;
 /**
  * @author zl
  */
-@ToString
 public class MyRunnable implements Runnable {
     private String command;
 

@@ -1,6 +1,7 @@
 package com.middle.redis;
 
-import org.apache.commons.lang3.StringUtils;
+import com.sun.deploy.util.StringUtils;
+import io.netty.util.internal.StringUtil;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
@@ -24,7 +25,7 @@ public class RedisDemo {
 
         // 查询缓存
         String aobing = redis.get(id.toString());
-        if (StringUtils.isNotBlank(aobing)) {
+        if (aobing == null) {
             System.out.println(aobing);
             return;
         }

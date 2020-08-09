@@ -1,6 +1,6 @@
 package com.zip4j;
 
-import lombok.SneakyThrows;
+import net.lingala.zip4j.exception.ZipException;
 import net.lingala.zip4j.io.ZipOutputStream;
 import net.lingala.zip4j.model.ZipParameters;
 import net.lingala.zip4j.util.Zip4jConstants;
@@ -18,15 +18,14 @@ import java.util.zip.ZipEntry;
 public class ZipDemo {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ZipException {
         ZipDemo zipDemo = new ZipDemo();
         zipDemo.zipWithPass();
         zipDemo.zipWithNoFile();
 
     }
 
-    @SneakyThrows
-    public void generatZip() {
+    public void generatZip() throws IOException, ZipException {
         String sourceFilePath = Objects.requireNonNull(ZipDemo.class.getClassLoader().getResource("")).getPath();
         File sourceFile = new File(sourceFilePath);// xml文件所在文件夹路径
         FileInputStream fis = null;
@@ -79,10 +78,10 @@ public class ZipDemo {
         }
 
         System.out.println("压缩成功！");
+
     }
 
-    @SneakyThrows
-    public void zipWithPass() {
+    public void zipWithPass() throws IOException, ZipException {
 
         String sourceFilePath = Objects.requireNonNull(ZipDemo.class.getClassLoader().getResource("")).getPath();
         File sourceFile = new File(sourceFilePath);
@@ -148,8 +147,8 @@ public class ZipDemo {
 
         }
 
-    @SneakyThrows
-    public void zipWithNoFile() {
+
+    public void zipWithNoFile() throws IOException, ZipException {
 
         String sourceFilePath = Objects.requireNonNull(ZipDemo.class.getClassLoader().getResource("")).getPath();
         File sourceFile = new File(sourceFilePath);

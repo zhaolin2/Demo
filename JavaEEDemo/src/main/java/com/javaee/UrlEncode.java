@@ -1,6 +1,5 @@
 package com.javaee;
 
-import cn.hutool.core.net.URLEncoder;
 
 import java.nio.charset.StandardCharsets;
 
@@ -15,13 +14,13 @@ import java.nio.charset.StandardCharsets;
 public class UrlEncode {
 
     public static void main(String[] args) {
-        URLEncoder query = URLEncoder.createQuery();
-        String cnTest = query.encode("测试", StandardCharsets.ISO_8859_1);
-
-        System.out.println(cnTest);
-
-        String enTest = query.encode("test", StandardCharsets.ISO_8859_1);
-
-        System.out.println(enTest);
+//        URLEncoder query = URLEncoder.createQuery();
+//        String cnTest = query.encode("测试", StandardCharsets.ISO_8859_1);
+//
+//        System.out.println(cnTest);
+//
+//        String enTest = query.encode("test", StandardCharsets.ISO_8859_1);
+//
+//        System.out.println(enTest);
     }
 }

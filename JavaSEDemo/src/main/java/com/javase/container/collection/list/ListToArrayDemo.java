@@ -1,6 +1,5 @@
 package com.javase.container.collection.list;
 
-import com.google.common.base.Objects;
 import com.javase.thread.main;
 
 import java.lang.reflect.Array;
