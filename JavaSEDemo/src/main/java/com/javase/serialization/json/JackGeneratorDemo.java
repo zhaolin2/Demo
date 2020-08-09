@@ -6,6 +6,7 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 
 import java.io.IOException;
+import java.io.PrintStream;
 
 /**
  * @Description:jack的序列化
@@ -17,6 +18,16 @@ public class JackGeneratorDemo {
     public static void main(String[] args) {
 
         JackGeneratorDemo jackGeneratorDemo = new JackGeneratorDemo();
+
+        JsonFactory factory = new JsonFactory();
+        try (PrintStream err = System.err; JsonGenerator jg = factory.createGenerator(err, JsonEncoding.UTF8)) {
+            // 特征置为false 采用手动关流的方式
+            jg.disable(JsonGenerator.Feature.AUTO_CLOSE_TARGET);
+
+            // doSomething
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
