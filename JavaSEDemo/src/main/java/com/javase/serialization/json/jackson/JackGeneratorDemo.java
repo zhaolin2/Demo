@@ -1,4 +1,4 @@
-package com.javase.serialization.json;
+package com.javase.serialization.json.jackson;
 
 
 import com.fasterxml.jackson.core.JsonEncoding;

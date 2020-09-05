@@ -1,8 +1,9 @@
-package com.javase.serialization.json;
+package com.javase.serialization.json.jackson;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import com.javase.serialization.json.Person;
 
 import java.io.IOException;
 
@@ -15,7 +16,7 @@ public class JackParseDemo {
 
     public static void main(String[] args) throws IOException {
         String jsonStr = "{\"name\":\"YourBatman\",\"age\":18}";
-        Person person = new Person();
+        Person pearson = new Person();
 
         JsonFactory factory = new JsonFactory();
         try (JsonParser jsonParser = factory.createParser(jsonStr)) {
@@ -25,10 +26,10 @@ public class JackParseDemo {
                 String fieldname = jsonParser.getCurrentName();
                 if ("name".equals(fieldname)) {
                     jsonParser.nextToken();
-                    person.setName(jsonParser.getText());
+                    pearson.setName(jsonParser.getText());
                 } else if ("age".equals(fieldname)) {
                     jsonParser.nextToken();
-                    person.setAge(jsonParser.getIntValue());
+                    pearson.setAge(jsonParser.getIntValue());
                 }
 
                 // value值不对的时候  会抛出异常
@@ -41,7 +42,7 @@ public class JackParseDemo {
                 jsonParser.getValueAsString("123");
             }
 
-            System.out.println(person);
+            System.out.println(pearson);
         }
     }
 }
