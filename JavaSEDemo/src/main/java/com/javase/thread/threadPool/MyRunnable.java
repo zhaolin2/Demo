@@ -1,4 +1,4 @@
-package com.javase.threadPool;
+package com.javase.thread.threadPool;
 
 
 import java.time.LocalDate;

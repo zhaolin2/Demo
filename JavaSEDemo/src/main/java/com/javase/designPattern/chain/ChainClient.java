@@ -1,7 +1,5 @@
 package com.javase.designPattern.chain;
 
-import com.javase.thread.main;
-
 /**
  * @Description:经过处理之后的代码
  * @Author: zl

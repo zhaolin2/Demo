@@ -1,4 +1,4 @@
-package com.javase.thread.annotation;
+package com.javase.annotation;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -1,6 +1,6 @@
-package com.javase.lock;
+package com.javase.thread.lock;
 
-import com.javase.threadPool.MyRunnable;
+import com.javase.thread.threadPool.MyRunnable;
 
 import java.util.concurrent.locks.Lock;
 

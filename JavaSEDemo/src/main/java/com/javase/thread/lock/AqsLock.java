@@ -1,4 +1,4 @@
-package com.javase.lock;
+package com.javase.thread.lock;
 
 import com.sun.corba.se.impl.orbutil.concurrent.Sync;
 

@@ -1,4 +1,4 @@
-package com.javase.lock;
+package com.javase.thread.lock;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

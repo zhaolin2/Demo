@@ -1,6 +1,4 @@
-package com.javase.thread.annotation;
-
-import net.sf.cglib.proxy.Enhancer;
+package com.javase.annotation;
 
 public class Main {
     public static void main(String[] args) {

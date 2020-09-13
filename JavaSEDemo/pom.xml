@@ -60,9 +60,11 @@
             <artifactId>kryo</artifactId>
             <version>4.0.0</version>
         </dependency>
-
-
-
+        <dependency>
+            <groupId>org.apache.pulsar</groupId>
+            <artifactId>pulsar-client-messagecrypto-bc</artifactId>
+            <version>2.6.1</version>
+        </dependency>
 
 
     </dependencies>

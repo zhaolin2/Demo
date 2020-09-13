@@ -4,8 +4,6 @@ import com.fasterxml.jackson.core.FormatSchema;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.core.json.JsonWriteFeature;
-import com.javase.thread.main;
 
 import java.io.IOException;
 

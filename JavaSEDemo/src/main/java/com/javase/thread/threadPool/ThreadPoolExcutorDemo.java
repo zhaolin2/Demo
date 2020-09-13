@@ -1,4 +1,4 @@
-package com.javase.threadPool;
+package com.javase.thread.threadPool;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadFactory;

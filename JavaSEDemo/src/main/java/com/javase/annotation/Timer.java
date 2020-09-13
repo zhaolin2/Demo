@@ -1,4 +1,4 @@
-package com.javase.thread.annotation;
+package com.javase.annotation;
 
 import java.lang.annotation.*;
 

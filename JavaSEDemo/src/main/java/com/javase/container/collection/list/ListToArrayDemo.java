@@ -1,12 +1,8 @@
 package com.javase.container.collection.list;
 
-import com.javase.thread.main;
-
 import java.lang.reflect.Array;
-import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
