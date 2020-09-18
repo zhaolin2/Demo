@@ -1,4 +1,4 @@
-package com.guava;
+package com.guava.cache;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;

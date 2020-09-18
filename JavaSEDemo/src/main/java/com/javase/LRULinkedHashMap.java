@@ -1,4 +1,4 @@
-package com.javase.container;
+package com.javase;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

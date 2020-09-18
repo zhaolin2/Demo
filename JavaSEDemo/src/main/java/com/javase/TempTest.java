@@ -158,9 +158,3 @@ public class TempTest {
 
 }
 
-class SonClass extends TempTest{
-    public void test(){
-        System.out.println();
-        super.luckDraw();
-    }
-}
