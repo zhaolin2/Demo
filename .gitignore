@@ -37,15 +37,3 @@ hs_err_pid*
 /JavaEEDemo/target/
 /CommonDemo/target/
 /.idea/
-CommonDemo/src/main/java/com/util/
-JavaEEDemo/src/main/java/com/javaee/lock/
-JavaEEDemo/src/main/resources/
-JavaEEDemo/src/test/
-JavaSEDemo/src/main/java/com/javase/designPattern/abstractFactory/
-JavaSEDemo/src/main/java/com/javase/designPattern/adapter/
-JavaSEDemo/src/main/java/com/javase/designPattern/builder/
-JavaSEDemo/src/main/java/com/javase/designPattern/delegation/
-JavaSEDemo/src/test/
-MiddleWareDemo/src/main/resources/
-MiddleWareDemo/src/test/
-/MiddleWareDemo/target/
