@@ -3,7 +3,7 @@ package com.javase.serialization.binary;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
-import com.javase.serialization.json.Person;
+import com.javase.serialization.Person;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

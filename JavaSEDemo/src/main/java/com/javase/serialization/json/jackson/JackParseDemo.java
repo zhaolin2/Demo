@@ -3,7 +3,7 @@ package com.javase.serialization.json.jackson;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.javase.serialization.json.Person;
+import com.javase.serialization.Person;
 
 import java.io.IOException;
 

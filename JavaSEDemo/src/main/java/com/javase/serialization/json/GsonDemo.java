@@ -2,6 +2,7 @@ package com.javase.serialization.json;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.javase.serialization.Person;
 
 import java.util.List;
 

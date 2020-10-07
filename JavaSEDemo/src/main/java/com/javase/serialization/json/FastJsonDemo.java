@@ -1,6 +1,7 @@
 package com.javase.serialization.json;
 
 import com.alibaba.fastjson.JSON;
+import com.javase.serialization.Person;
 
 /**
  * @Description:fastJson序列化的Demo

@@ -108,4 +108,17 @@ public final class ThreadPoolFactoryUtils {
             log.info("===========================================");
         }, 0, 1, TimeUnit.SECONDS);
     }
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        ExecutorService executorService = ThreadPoolFactoryUtils.createCustomThreadPoolIfAbsent("测试线程池");
+
+        Future<Integer> future = executorService.submit(new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                return 100;
+            }
+        });
+
+        future.get();
+    }
 }

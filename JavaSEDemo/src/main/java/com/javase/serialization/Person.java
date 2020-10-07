@@ -1,9 +1,11 @@
-package com.javase.serialization.json;
+package com.javase.serialization;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
 
 /**
  * @Description:
@@ -13,7 +15,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Setter
 @Getter
-public class Person {
+public class Person implements Serializable {
     String name;
 
     Integer age;
