@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * @author zl
  */
-public class SystenToBuffer {
+public class SystemToBuffer {
 
     public static void main(String[] args) {
         BufferedReader buf = new BufferedReader(

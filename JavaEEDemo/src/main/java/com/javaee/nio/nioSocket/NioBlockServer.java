@@ -1,8 +1,7 @@
-package com.javase.nio.nioSocket;
+package com.javaee.nio.nioSocket;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.ServerSocket;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.channels.ServerSocketChannel;

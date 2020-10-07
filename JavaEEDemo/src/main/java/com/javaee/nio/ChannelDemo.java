@@ -1,7 +1,6 @@
-package com.javase.nio;
+package com.javaee.nio;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;

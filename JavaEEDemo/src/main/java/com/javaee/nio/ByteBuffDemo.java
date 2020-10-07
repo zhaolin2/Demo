@@ -1,7 +1,6 @@
-package com.javase.nio;
+package com.javaee.nio;
 
 import java.nio.ByteBuffer;
-import java.util.Locale;
 
 /**
  * @author zl

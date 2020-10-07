@@ -1,4 +1,4 @@
-package com.javase.nio.nioSocket;
+package com.javaee.nio.nioSocket;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -6,7 +6,6 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.Locale;
 
 /**
  * @author zl
