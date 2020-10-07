@@ -11,7 +11,7 @@ import java.nio.file.StandardOpenOption;
 /**
  * @author zl
  * Channel只负责传输数据
- *   对于数据的操作都是通过缓冲区来进行的
+ *   对于数据的操作都是通过缓冲区(Buffer)来进行的
  */
 public class ChannelDemo {
 
