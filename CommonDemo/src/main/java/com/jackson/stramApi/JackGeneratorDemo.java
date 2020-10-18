@@ -1,4 +1,4 @@
-package com.javase.serialization.json.jackson;
+package com.jackson.stramApi;
 
 
 import com.fasterxml.jackson.core.JsonEncoding;
@@ -9,9 +9,13 @@ import java.io.IOException;
 import java.io.PrintStream;
 
 /**
- * @Description:jack的序列化
- * @Author: zl
- * @date: 2020/8/3
+ * javkson使用的是流式的api，读写都需要close
+ * 增量模式  每个部分都需要一步一步往上加
+ * JSONTOKEN 每个部分都是一个独立的Token 最终拼凑起来就是一个JSON {@link com.fasterxml.jackson.core.JsonToken}
+ *
+ * {@link JsonFactory}Jackson主要的工厂方法，用于配置和构建解析器(JsonParser)和生成器(JsonGenerator)，这个工厂实例是线程安全的，所以可以重复使用
+ *  {@link JsonGenerator} 用来生成Json格式的内容的（序列化）
+ *  {@link com.fasterxml.jackson.core.JsonParser} 读取Json格式的内容（返序列化，必须是Json格式）
  */
 public class JackGeneratorDemo {
 

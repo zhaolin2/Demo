@@ -1,9 +1,9 @@
-package com.javase.serialization.json.jackson;
+package com.jackson.stramApi;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.javase.serialization.Person;
+import com.jackson.entity.Person;
 
 import java.io.IOException;
 

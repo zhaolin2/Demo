@@ -1,4 +1,4 @@
-package com.javase.serialization.json.jackson;
+package com.jackson.feature;
 
 import com.fasterxml.jackson.core.FormatSchema;
 import com.fasterxml.jackson.core.JsonEncoding;
