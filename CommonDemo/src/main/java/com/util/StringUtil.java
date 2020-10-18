@@ -25,9 +25,7 @@ public class StringUtil {
 
     //判断是否包含中文
     public static boolean inContainChines(String str){
-
         Matcher matcher = chinesePattern.matcher(str);
-
         return matcher.find();
     }
 }
