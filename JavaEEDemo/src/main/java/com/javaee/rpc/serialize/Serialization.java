@@ -10,7 +10,7 @@ import java.io.IOException;
  * {@link com.javaee.rpc.serialize.FastJsonSerialization} 作为文本型 无法比较
  * {@link com.javaee.rpc.serialize.Hessian2Serialization}  跨语言 字节数适中
  * {@link com.javaee.rpc.serialize.KryoSerialization}  字节数最小 无法跨语言
- * {@link com.javaee.rpc.serialize.ProtostuffSerialization}
+ * {@link ProtoStuffSerialization}
  */
 public interface Serialization {
 

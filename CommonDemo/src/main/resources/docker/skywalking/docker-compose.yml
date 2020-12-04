@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  oap:
+    image: apache/skywalking-oap-server:6.2.0
+    container_name: skywalking-oap
+    restart: always
+    ports:
+      - 11800:11800
+      - 12800:12800
+    environment:
+      - SW_STORAGE=elasticsearch #Es的存储
+      - SW_STORAGE_ES_CLUSTER_NODES=${ES_NODE} # Es的节点地址，从.env文件中取
+      - TZ=Asia/Shanghai #设定东八区的城市，防止Oap记录数据时用0时区
+  ui:
+    image: apache/skywalking-ui:6.2.0
+    container_name: skywalking-ui
+    depends_on:
+      - oap
+    links:
+      - oap
+    restart: always
+    ports:
+      - 18080:8080 #默认8080端口，这里设置18080映射到宿主机，可修改
+    environment:
+      collector.ribbon.listOfServers: oap:12800

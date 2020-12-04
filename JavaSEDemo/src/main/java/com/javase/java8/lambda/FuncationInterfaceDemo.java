@@ -8,12 +8,22 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 /**
- * @author zl
- * predict (T) -> boolean
- * consumer  (T) -> void
- * supply () -> T
+ * 一元接口
+ * predict (T) -> boolean  谓词
+ *      BiPredict() 二元谓词函数
+ * consumer  (T) -> void  消费者接口
+ *      BiConsumer() 二元消费者函数
+ * supply () -> T 是一种生成能力
  * apply (T) -> R
+ *
  * compatator  (T,T) -> int
+ *
+ * Function
+ *      BiFunction()
+ *
+ * unaryOperatOr 抽象一元算子
+ *      BinaryOperator 二元算子
+ *
  */
 public class FuncationInterfaceDemo {
 

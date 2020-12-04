@@ -1,6 +1,7 @@
 package com.javase.juc.container;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -18,6 +19,8 @@ public class CopyOnWriteDemo {
         ArrayList<String> resources = new ArrayList<>();
         ArrayList<User> users = new ArrayList<>();
         CopyOnWriteArrayList<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
+
+
 
         resources.stream().parallel().forEach(str ->{
             long count = str.codePoints().count();

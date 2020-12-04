@@ -1,6 +1,6 @@
 package com.javase.encry;
 
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
+//import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -20,7 +20,7 @@ import java.util.Base64;
 public class PBEEncry {
     public static void main(String[] args) throws Exception {
         // 把BouncyCastle作为Provider添加到java.security:
-        Security.addProvider(new BouncyCastleProvider());
+//        Security.addProvider(new BouncyCastleProvider());
         // 原文:
         String message = "Hello, world!";
         // 加密口令:

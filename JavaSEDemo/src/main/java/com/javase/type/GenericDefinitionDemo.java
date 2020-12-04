@@ -108,6 +108,11 @@ public class GenericDefinitionDemo {
                 declaer.getTypeName();
             }
         };
+
+        testMethod(new ArrayList<String>());
+    }
+
+    private void testMethod(List<?> testList){
     }
 
 }

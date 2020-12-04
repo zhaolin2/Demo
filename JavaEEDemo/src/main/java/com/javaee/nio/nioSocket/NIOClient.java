@@ -1,7 +1,6 @@
 package com.javaee.nio.nioSocket;
 
 import javafx.concurrent.Worker;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -13,9 +12,12 @@ import java.nio.channels.SocketChannel;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.Iterator;
+import java.util.logging.Logger;
 
-@Slf4j
 public class NIOClient {
+
+    static private Logger log=Logger.getLogger(NIOClient.class.getName());
+
 
     public static void main(String[] args) {
 

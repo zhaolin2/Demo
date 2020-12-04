@@ -1,6 +1,5 @@
 package com.javaee.nio.nioSocket;
 
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -10,9 +9,11 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
+import java.util.logging.Logger;
 
-@Slf4j
 public class NIOServer {
+
+    static private Logger log=Logger.getLogger(NIOServer.class.getName());
 
     private static Selector selector;
 
@@ -37,7 +38,7 @@ public class NIOServer {
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
             log.info("NioServer 启动完成");
         } catch (IOException e) {
-            log.error("NIO启动出错",e);
+            log.info("NIO启动出错"+e);
         }
     }
 
