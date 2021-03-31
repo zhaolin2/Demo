@@ -22,7 +22,7 @@
         <lombok.version>1.16.10</lombok.version>
         <velocity.version>2.1</velocity.version>
         <cglib.version>2.2.2</cglib.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
     </properties>
     
     <description>主要用来存放平时所写的demo</description>
